@@ -11,7 +11,7 @@
   order: 10;
 }
 
-@media screen and (max-width: 349px) {
+@media screen and (max-width: 375px) {
   .longdate {
     display: none;
   }
@@ -24,9 +24,47 @@
   .whats_on_table tr td:nth-child(3), td:nth-child(4) {
     display: none;
   }
+   .header__logo {
+    height: 48px;
+    margin-right: 0.5em;
+  }
+  .header__title {
+    font-size: 2em;
+    vertical-align: bottom;
+    margin-left: 0;
+  }
+  .nav {
+    z-index: 10;
+    background-color: #fff;
+    width: 300px;
+    position: absolute;
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300px, 0);
+    transition: transform 0.3s ease;
+  }
+  .nav.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .nav__item {
+    display: list-item;
+    border-bottom: 1px solid #E0E0E0;
+    width: 100%;
+    text-align: left;
+  }
+  .header__menu {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    padding: 1em;
+  }
+  .header__menu svg {
+    width: 32px;
+    color: #E0E0E0;
+  }
 }
 
-@media screen and (min-width: 350px; max-width: 549px) {
+@media screen and (min-width: 350px) and (max-width: 549px) {
   .header__logo {
     height: 48px;
     margin-right: 0.5em;
@@ -63,7 +101,7 @@
   }
   .header__menu svg {
     width: 32px;
-    fill: #E0E0E0;
+    color: #E0E0E0;
   }
   .shortdate {
     display: none;
